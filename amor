@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buen día</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 40px;
+        }
+        .love {
+            width: 30px; /* Tamaño reducido */
+            height: 30px; /* Tamaño reducido */
+            background: red;
+            transform: rotate(45deg);
+            position: absolute;
+            animation: beating 2s ease infinite;
+        }
+        .love:before,
+        .love:after {
+            content: "";
+            width: 30px; /* Tamaño reducido */
+            height: 30px; /* Tamaño reducido */
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            transform: rotate(45deg); /* Asegúrate de rotar también los elementos :before y :after */
+        }
+        .love:before {
+            top: 0;
+            left: -15px; /* Ajuste para el tamaño reducido */
+        }
+        .love:after {
+            top: -15px; /* Ajuste para el tamaño reducido */
+            left: 0;
+        }
+        @keyframes beating {
+            0% {
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                transform: rotate(45deg) scale(1.5);
+            }
+            100% {
+                transform: rotate(45deg) scale(1);
+            }
+        }
+        .top-left {
+            top: 30px; /* Ajuste para alejarse de la esquina */
+            left: 30px; /* Ajuste para alejarse de la esquina */
+        }
+        .top-right {
+            top: 30px; /* Ajuste para alejarse de la esquina */
+            right: 30px; /* Ajuste para alejarse de la esquina */
+        }
+        .bottom-left {
+            bottom: 30px; /* Ajuste para alejarse de la esquina */
+            left: 30px; /* Ajuste para alejarse de la esquina */
+        }
+        .bottom-right {
+            bottom: 30px; /* Ajuste para alejarse de la esquina */
+            right: 30px; /* Ajuste para alejarse de la esquina */
+        }
+    </style>
+</head>
+<body>
+    <h1>Buen día gordi</h1>
+    <h2>Que tengas una hermosa mañana y un hermoso día 😘</h2>
+    <p>Te amo <3</p>
+
+    <!-- Corazones en las esquinas -->
+    <div class="love top-left"></div>
+    <div class="love top-right"></div>
+    <div class="love bottom-left"></div>
+    <div class="love bottom-right"></div>
+</body>
+</html>
